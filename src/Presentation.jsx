@@ -16,7 +16,7 @@ import WhatDidIDoSlide from './slides/WhatDidIDoSlide.jsx'
 import OptimizedFlowSlide from './slides/OptimizedFlowSlide.jsx'
 import OverallImpactSlide from './slides/OverallImpactSlide.jsx'
 
-const AUTOPLAY_MS = 10000
+const AUTOPLAY_MS = 6000
 
 // ---------------------------------------------------------------------------
 // Slide definitions
@@ -80,6 +80,7 @@ const SLIDES = [
     glow: { color: 'rgba(56, 114, 119, 0.4)', pos: '50% 50%', size: '80% 80%' },
     accent: '#387277',
     note: 'Structural diagram with disappearing roles',
+    duration: 8000,
     Content: CentralizedDesignSlide,
   },
   {
@@ -131,6 +132,7 @@ const SLIDES = [
     glow: { color: 'rgba(255,0,128,0.10)', pos: '50% 50%', size: '80% 75%' },
     accent: '#ff0080',
     note: '3-step flow diagram with pink bar reveal',
+    duration: 11000,
     Content: OptimizedFlowSlide,
   },
   {
