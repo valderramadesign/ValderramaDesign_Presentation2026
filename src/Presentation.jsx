@@ -76,7 +76,7 @@ const SLIDES = [
   {
     id: 'centralized-design',
     num: '06',
-    label: 'Organizational Shift',
+    label: 'Scope',
     bg: '#214e54',
     glow: { color: 'rgba(56, 114, 119, 0.4)', pos: '50% 50%', size: '80% 80%' },
     accent: '#387277',
@@ -117,7 +117,7 @@ const SLIDES = [
   {
     id: 'what-did-i-do',
     num: '10',
-    label: 'What did I do?',
+    label: 'Deep dive into Pay in 4',
     bg: '#020b18',
     glow: { color: 'rgba(0,229,255,0.12)', pos: '50% 50%', size: '90% 85%' },
     accent: '#ffffff',
