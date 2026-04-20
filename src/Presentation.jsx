@@ -15,6 +15,7 @@ import ResearchLearningsSlide from './slides/ResearchLearningsSlide.jsx'
 import WhatDidIDoSlide from './slides/WhatDidIDoSlide.jsx'
 import OptimizedFlowSlide from './slides/OptimizedFlowSlide.jsx'
 import OverallImpactSlide from './slides/OverallImpactSlide.jsx'
+import ThankYouSlide from './slides/ThankYouSlide.jsx'
 
 const AUTOPLAY_MS = 6000
 
@@ -144,6 +145,17 @@ const SLIDES = [
     accent: '#00e5ff',
     note: 'Impact stats with area chart',
     Content: OverallImpactSlide,
+  },
+  {
+    id: 'thank-you',
+    num: '13',
+    label: 'Thank you',
+    bg: '#000000',
+    glow: { color: 'rgba(255,255,255,0.0)', pos: '50% 50%', size: '0% 0%' },
+    accent: '#ffffff',
+    note: 'Closing quote — fades to black after 5s',
+    duration: 20000,
+    Content: ThankYouSlide,
   },
 ]
 
@@ -446,9 +458,10 @@ function NavArrow({ dir, onClick }) {
   return (
     <motion.button
       onClick={onClick}
-      className="absolute top-1/2 -translate-y-1/2 z-30 flex items-center justify-center w-9 h-9 rounded-full cursor-pointer"
+      className="absolute top-1/2 z-30 flex items-center justify-center w-9 h-9 rounded-full cursor-pointer"
       style={{
         [isPrev ? 'left' : 'right']: '1.25rem',
+        y: '-50%',
         background: 'rgba(255,255,255,0.04)',
         border: '1px solid rgba(255,255,255,0.07)',
         backdropFilter: 'blur(6px)',
