@@ -30,15 +30,17 @@ function useCountUp(target, delaySeconds = 0) {
 
 const EASE = [0.22, 1, 0.36, 1]
 
+const CHART_COLOR = '#f5c518'
+
 const data = [
-  { name: "Q1 '22", value: 18 },
-  { name: "Q2 '22", value: 34 },
-  { name: "Q3 '22", value: 52 },
-  { name: "Q4 '22", value: 71 },
-  { name: "Q1 '23", value: 95 },
-  { name: "Q2 '23", value: 118 },
-  { name: "Q3 '23", value: 148 },
-  { name: "Q4 '23", value: 184 },
+  { name: "Q1 '24", value: 12 },
+  { name: "Q2 '24", value: 56 },
+  { name: "Q3 '24", value: 130 },
+  { name: "Q4 '24", value: 280 },
+  { name: "Q1 '25", value: 520 },
+  { name: "Q2 '25", value: 880 },
+  { name: "Q3 '25", value: 1380 },
+  { name: "Q4 '25", value: 2100 },
 ]
 
 // US cards: count-up starts ~0.9s (after cards fade in at ~0.89s)
@@ -241,8 +243,8 @@ export default function OverallImpactSlide({ accent = '#00e5ff' }) {
                 <AreaChart data={data} margin={{ top: 4, right: 0, left: 0, bottom: 0 }}>
                   <defs>
                     <linearGradient id="impactGradient" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%"  stopColor={accent} stopOpacity={0.35} />
-                      <stop offset="95%" stopColor={accent} stopOpacity={0} />
+                      <stop offset="5%"  stopColor={CHART_COLOR} stopOpacity={0.35} />
+                      <stop offset="95%" stopColor={CHART_COLOR} stopOpacity={0} />
                     </linearGradient>
                   </defs>
                   <XAxis
@@ -254,19 +256,19 @@ export default function OverallImpactSlide({ accent = '#00e5ff' }) {
                   <Tooltip
                     contentStyle={{
                       background: 'rgba(10,15,30,0.9)',
-                      border: `1px solid ${accent}40`,
+                      border: `1px solid ${CHART_COLOR}40`,
                       borderRadius: '8px',
                       color: '#fff',
                       fontFamily: 'Inter, sans-serif',
                       fontSize: '12px',
                     }}
-                    itemStyle={{ color: accent }}
-                    cursor={{ stroke: `${accent}40`, strokeWidth: 1 }}
+                    itemStyle={{ color: CHART_COLOR }}
+                    cursor={{ stroke: `${CHART_COLOR}40`, strokeWidth: 1 }}
                   />
                   <Area
                     type="monotone"
                     dataKey="value"
-                    stroke={accent}
+                    stroke={CHART_COLOR}
                     strokeWidth={2}
                     fillOpacity={1}
                     fill="url(#impactGradient)"
